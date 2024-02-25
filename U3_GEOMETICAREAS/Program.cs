@@ -57,6 +57,9 @@ namespace U3_GEOMETICAREAS
 								Rectangular_area object2 = new Rectangular_area(width_side, lenght_side);
 								Console.WriteLine(object2.ToString());
 								Console.WriteLine("The area is : " + object2.CalculateArea(width_side, lenght_side));
+								Console.WriteLine( object2.Printhypotenusa());
+
+
 							     width_side = double.NaN;
 							 
 							}

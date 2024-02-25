@@ -25,20 +25,19 @@ namespace U3_GEOMETICAREAS
 
 		public Rectangular_area():base()
 		{
-
+			
 			large_side = 0;
+			
 		}
 		public Rectangular_area(double side, double large_S): base(side)
 		{
 			this.large_side = large_S;
+			this.hypotenuse=CalculateHypotenuse();
 		}
 
 		//Methods
 
-		public void CalculateHypotenuse()
-		{
-			hypotenuse = Math.Sqrt((side * side) + (large_side * large_side));
-		}
+		
 
 		//Method that returns but does not receive parameters
 		public override string ToString()
@@ -52,9 +51,14 @@ namespace U3_GEOMETICAREAS
 			return (side * large_S);
 		}
 
+		
+		public double CalculateHypotenuse()
+		{
+		  return  Math.Sqrt((side * side) + (large_side * large_side));
+			
+		}
 		//Method that does not return but receives parameters
-
-		public string Printhypotenusa(double hypotenuse)
+		public string Printhypotenusa()
 		{
 			return "The hypotenuse of the rectangle measures  " + "" + hypotenuse;
 		}
